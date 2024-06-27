@@ -3,7 +3,9 @@
 
 
 def pascal_triangle(n):
-    """ list of integers """
+    """
+    list of integers
+    """
     if n <= 0:
         return []
     
