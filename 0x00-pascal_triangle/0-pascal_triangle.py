@@ -1,4 +1,9 @@
+#!/usr/bin/python3
+""" A script for pascal's triangle for any possible number or digit"""
+
+
 def pascal_triangle(n):
+    """ list of integers """
     if n <= 0:
         return []
     
