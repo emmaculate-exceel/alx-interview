@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+#!/usr/bin/python3
 """ lockboxes algorithm for the lockbox interview """
 
 from collections import deque
