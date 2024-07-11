@@ -1,9 +1,10 @@
-#!/usr/bin/env python3
+#!/usr/bin/python3
 """ minimum operations """
 
 
 def minOperations(n):
     """ function to calculate the minimum operations """
+    
     if n == 0:
         return 0
 
