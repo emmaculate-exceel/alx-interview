@@ -9,7 +9,7 @@ def minOperations(n):
         return 0
 
     dp = [float('inf')] * (n + 1)
-    dp[1] = 0  # Starting with one 'H'
+    dp[1] = 0
 
     for i in range(2, n + 1):
         for j in range(1, i // 2 + 1):
