@@ -20,4 +20,4 @@ def minOperations(n):
 
 
 n = 9
-print(minOperations(n))  # Output: 6
+print(minOperations(n)) 
