@@ -24,3 +24,4 @@ status_code = {
 
 
 def handle_sig(sig, interface):
+    """ handling signal interuption """
