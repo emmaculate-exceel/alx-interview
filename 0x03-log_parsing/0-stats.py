@@ -24,14 +24,14 @@ if __name__ == '__main__':
             try:
                 status_code = data[-2]
                 if status_code in stats:
-                    stat[status_code] += 1
+                    stats[status_code] += 1
             except BaseException:
                 pass
             try:
                 filesize += int(data[-1])
             except BaseException:
                 pass
-            if count % 10 == 0:
+            #if count % 10 == 0:
                 print_stats(stats, filesize)
         print_stats(stats, filesize)
     except KeyboardInterrupt:
