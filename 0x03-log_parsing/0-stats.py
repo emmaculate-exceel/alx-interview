@@ -25,3 +25,7 @@ status_code = {
 
 def handle_sig(sig, interface):
     """ handling signal interuption """
+    print_statistic()
+    sys.exit(0)
+signal.signal(signal.SIGINT, handle_sig)
+
