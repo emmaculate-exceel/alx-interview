@@ -31,6 +31,7 @@ def handle_sig(sig, interface):
 
 signal.signal(signal.SIGINT, handle_sig)
 
+
 def parse_line(line):
     """ parsing the line of """
     global status_code, line_count, file_size
@@ -44,7 +45,7 @@ def parse_line(line):
 
         if status in status_code:
             status_code[status] += 1
-            
+
         file_size += file_s
 
 
@@ -53,5 +54,4 @@ def print_statistic():
     print(f"Total file size: {total_size}")
     for code in sorted(status_code.keys()):
         if status_code[code] > 0:
-            print(f"{code}: {status_code[code]}")
-            
+            print(f"{code}: {status_code[code]}")           
