@@ -55,3 +55,19 @@ def print_statistic():
     for code in sorted(status_code.keys()):
         if status_code[code] > 0:
             print(f"{code}: {status_code[code]}")
+
+
+def main():
+    """ main function """
+    global line_count
+
+    for line in sys.stdin:
+        line = line.strip()
+
+        if line:
+            parse_line(line)
+
+        if line_count % 10 == 0:
+            print_statistic()
+
+    print_statistics()
