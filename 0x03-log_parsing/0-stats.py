@@ -33,7 +33,7 @@ if __name__ == '__main__':
                 pass
             if count % 10 == 0:
                 print_stats(stats, filesize)
-        #print_stats(stats, filesize)
+        print_stats(stats, filesize)
     except KeyboardInterrupt:
         print_stats(stats, filesiz)
         raise
