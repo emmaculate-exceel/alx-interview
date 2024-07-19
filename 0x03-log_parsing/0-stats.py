@@ -31,9 +31,9 @@ if __name__ == '__main__':
                 filesize += int(data[-1])
             except BaseException:
                 pass
-            #if count % 10 == 0:
+            if count % 10 == 0:
                 print_stats(stats, filesize)
-        print_stats(stats, filesize)
+        #print_stats(stats, filesize)
     except KeyboardInterrupt:
         print_stats(stats, filesiz)
         raise
