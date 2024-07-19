@@ -15,7 +15,7 @@ if __name__ == '__main__':
         print("File size: {:d}".format(filesize))
         for k, v in sorted(stats.items()):
             if v:
-                print("{}: {}".format(k, v))
+                print("{}: ".format(k, v))
 
     try:
         for line in sys.stdin:
