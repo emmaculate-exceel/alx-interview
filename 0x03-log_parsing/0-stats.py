@@ -54,4 +54,4 @@ def print_statistic():
     print(f"Total file size: {total_size}")
     for code in sorted(status_code.keys()):
         if status_code[code] > 0:
-            print(f"{code}: {status_code[code]}")           
+            print(f"{code}: {status_code[code]}")
