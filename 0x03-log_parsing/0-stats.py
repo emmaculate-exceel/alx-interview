@@ -71,3 +71,7 @@ def main():
             print_statistic()
 
     print_statistic()
+
+
+if __name__ == '__main__':
+    main()
