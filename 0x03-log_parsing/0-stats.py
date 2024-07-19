@@ -51,7 +51,7 @@ def parse_line(line):
 
 def print_statistic():
     """ this function print sys.stdin line statistic """
-    print(f"Total file size: {total_size}")
+    print(f"Total file size: {file_size}")
     for code in sorted(status_code.keys()):
         if status_code[code] > 0:
             print(f"{code}: {status_code[code]}")
