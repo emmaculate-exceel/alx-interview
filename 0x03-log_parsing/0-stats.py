@@ -44,7 +44,7 @@ def parse_line(line):
         file_s = int(match.group(2))
 
         if status in status_code:
-            status[status] += 1
+            status_code[status] += 1
 
         file_size += file_s
 
