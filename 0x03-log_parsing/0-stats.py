@@ -40,11 +40,11 @@ def parse_line(line):
 
     match = re.match(pattern, line)
     if match:
-        status_code = int(match.group(1))
+        status = int(match.group(1))
         file_s = int(match.group(2))
 
         if status in status_code:
-            status_code[status] += 1
+            status[status] += 1
 
         file_size += file_s
 
