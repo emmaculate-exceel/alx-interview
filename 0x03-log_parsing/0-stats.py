@@ -35,7 +35,7 @@ signal.signal(signal.SIGINT, handle_sig)
 def parse_line(line):
     """ parsing the line of """
     global status_code, line_count, file_size
-    line_count = +1
+    line_count += 1
     pattern = r'^\S+ - \[[^\]]+\] "GET /projects/260 HTTP/1.1" (\d+) (\d+)'
 
     match = re.match(pattern, line)
