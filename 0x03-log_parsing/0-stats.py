@@ -70,4 +70,4 @@ def main():
         if line_count % 10 == 0:
             print_statistic()
 
-    print_statistics()
+    print_statistic()
