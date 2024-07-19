@@ -12,7 +12,7 @@ if __name__ == '__main__':
     stats = {k: 0 for k in codes}
 
     def print_stats(stats: dict, file_size: int):
-        print("File size {:d}".format(filesize))
+        print("File size: {:d}".format(filesize))
         for k, v in sorted(stats.items()):
             if v:
                 print("{}: {}".format(k, v))
@@ -24,7 +24,7 @@ if __name__ == '__main__':
             try:
                 status_code = data[-2]
                 if status_code in stats:
-                    stats[status_code] += 1
+                    stat[status_code] += 1
             except BaseException:
                 pass
             try:
