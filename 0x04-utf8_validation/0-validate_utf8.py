@@ -22,13 +22,13 @@ def validUTF8(data):
                 continue
             elif (byte & bit7) != 0 and (byte & bit6) == 0:
                 return False
-            elif (byte & bit7) != 0 and (btye & bit6) == 0:
+            elif (byte & bit7) != 0 and (byte & bit6) == 0:
                 if (byte & (bit7 >> 1)) == 0:
-                    number_of_bytes = 2
+                    number_of_bytes = 1
                 elif (byte & (bit7 >> 2)) == 0:
-                    number_of_bytes = 3
+                    number_of_bytes = 2
                 elif (byte & (bit7 >> 3)) == 0:
-                    number_of_bytes = 4
+                    number_of_bytes = 3
                 else:
                     return False
             else:
@@ -36,3 +36,4 @@ def validUTF8(data):
                     number_of_bytes -= 1
                 else:
                     return False
+    return number_of_bytes == 0
