@@ -17,7 +17,7 @@ def validUTF8(data):
     mask_2 = 0b11100000
     mask_3 = 0b11110000
     mask_4 = 0b11111000
-    
+
     for byte in data:
         if number_of_bytes == 0:
             if (byte & mask_1) == 0:
@@ -29,9 +29,9 @@ def validUTF8(data):
             elif (byte & mask_3) == 0b11110000:
                 number_of_bytes = 3
             else:
-                    return False
+                return False
         else:
-            if (byte & bit7) != bit7 || (byte & bit6) == bit6:
+            if (byte & bit7) != bit7 or (byte & bit6) == bit6:
                 number_of_bytes -= 1
             else:
                 return False
