@@ -13,28 +13,26 @@ def validUTF8(data):
     bit7 = 1 << 7
     bit6 = 1 << 6
 
+    mask_1 = 0b10000000
+    mask_2 = 0b11100000
+    mask_3 = 0b11110000
+    mask_4 = 0b11111000
+    
     for byte in data:
-        byte = byte & 0xFF
-
         if number_of_bytes == 0:
-
-            if (byte & bit7) == 0:
+            if (byte & mask_1) == 0:
                 continue
-            elif (byte & (bit7 | bit6)) == bit7:
-                # != 0 and (byte & bit6) == 0:
-                return False
-            elif (byte & bit7) != 0 and (byte & bit6) == 0:
-                if (byte & (bit7 >> 1)) == 0:
-                    number_of_bytes = 1
-                elif (byte & (bit7 >> 2)) == 0:
-                    number_of_bytes = 2
-                elif (byte & (bit7 >> 3)) == 0:
-                    number_of_bytes = 3
-                else:
-                    return False
+            elif (byte & mask_2) == 0b11000000:
+                number_of_bytes = 1
+            elif (byte & mask_3) == 0b11100000:
+                number_of_bytes = 2
+            elif (byte & mask_3) == 0b11110000:
+                number_of_bytes = 3
             else:
-                if (byte & (bit7 | bit6)) != bit6:  # 0 and (byte & bit6) == 0:
-                    number_of_bytes -= 1
-                else:
                     return False
+        else:
+            if (byte & bit7) != bit7 || (byte & bit6) == bit6:
+                number_of_bytes -= 1
+            else:
+                return False
     return number_of_bytes == 0
