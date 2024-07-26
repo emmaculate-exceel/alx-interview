@@ -20,7 +20,7 @@ def validUTF8(data):
 
             if (byte & bit7) == 0:
                 continue
-            elif (byte & bit7) != 0 and (byte & bit6) == 0:
+            elif (byte & (bit7 | bit6)) == bit7: #!= 0 and (byte & bit6) == 0:
                 return False
             elif (byte & bit7) != 0 and (byte & bit6) == 0:
                 if (byte & (bit7 >> 1)) == 0:
@@ -32,7 +32,7 @@ def validUTF8(data):
                 else:
                     return False
             else:
-                if (byte & bit7) != 0 and (byte & bit6) == 0:
+                if (byte & (bit7 | bit6)) != bit6: #0 and (byte & bit6) == 0:
                     number_of_bytes -= 1
                 else:
                     return False
