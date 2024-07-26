@@ -32,7 +32,7 @@ def validUTF8(data):
                 return False
         else:
             if (byte & bit7) != bit7 or (byte & bit6) == bit6:
-                number_of_bytes -= 1
-            else:
                 return False
+            number_of_bytes -= 1
+
     return number_of_bytes == 0
