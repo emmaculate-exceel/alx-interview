@@ -4,6 +4,7 @@
 
 import sys
 
+
 def is_valid(board, row, col):
     """ checking validity """
     for i in range(row):
@@ -12,6 +13,7 @@ def is_valid(board, row, col):
            board[i] + i == col + row:
             return False
     return True
+
 
 def solve_nqueens(board, row, n):
     """ boarding """
@@ -24,12 +26,14 @@ def solve_nqueens(board, row, n):
             solve_nqueens(board, row + 1, n)
             board[row] = -1
 
+
 def print_solution(board):
     """ print output """
     solution = []
     for row in range(len(board)):
         solution.append([row, board[row]])
     print(solution)
+
 
 def main():
     """ main function """
