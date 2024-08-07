@@ -10,7 +10,7 @@ if (process.argv.length !== 3) {
 }
 
 const movieId = process.argv[2];
-const apiUrl = `https://swapi.dev/api/films/${movieId}/`;
+const apiUrl = "https://swapi.dev/api/films/${movieId}/";
 
 request(apiUrl, (error, response, body) => {
   if (error) {
