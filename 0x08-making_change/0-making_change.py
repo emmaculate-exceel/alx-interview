@@ -2,6 +2,7 @@
 """making changes to file using python
 """
 
+
 def makeChange(coins, total):
     """ coins and it's sum
     """
@@ -16,6 +17,7 @@ def makeChange(coins, total):
             dp[i] = min(dp[i], dp[i - coin] + 1)
 
     return dp[total] if dp[total] != float('inf') else -1
+
 
 if __name__ == "__main__":
     coins = [1, 2, 3]
