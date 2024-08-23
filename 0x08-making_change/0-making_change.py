@@ -11,12 +11,12 @@ def makeChange(coins, total):
         return 0
     # sort the coins in descending order
     coins.sort(reverse=True)
-    change = 0
+    chn = 0
     for coin in coins:
         if total <= 0:
             break
-        temp = total // coin
-        change += temp
+        tmp = total // coin
+        chn += temp
         total -= (temp * coin)
     if total != 0:
         return -1
