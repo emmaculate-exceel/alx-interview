@@ -16,8 +16,8 @@ def makeChange(coins, total):
         if total <= 0:
             break
         tmp = total // coin
-        chn += temp
-        total -= (temp * coin)
+        chn += tmp
+        total -= (tmp * coin)
     if total != 0:
         return -1
-    return change
+    return chn
