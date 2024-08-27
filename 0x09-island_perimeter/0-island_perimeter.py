@@ -3,6 +3,7 @@
 island perimeter function for the task
 """
 
+
 def island_perimeter(grid):
     """
     Returns the perimeter of the island described in the grid.
@@ -15,7 +16,7 @@ def island_perimeter(grid):
     for i in range(rows):
         for j in range(cols):
             if grid[i][j] == 1:
-                #start the  sides of each land
+                # start the  sides of each land
                 perimeter += 4
 
                 if i > 0 and grid[i-1][j] == 1:
@@ -34,4 +35,4 @@ if __name__ == "__main__":
         [0, 0, 0, 0, 0, 0],
         [0, 0, 0, 0, 0, 0]
     ]
-    print(island_perimeter(grid)) 
+    print(island_perimeter(grid))
